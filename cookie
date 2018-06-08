@@ -1,0 +1,8 @@
+#LWP-Cookies-2.0
+Set-Cookie3: SPC_EC="\"6NpddykelAy8UDqN+rMvRynS8JDiXSu7KaVXaGspjBBrFXFi7tksqQqePzTbq9QdbVX2nmEY0b1SM5ZuqjCbH5dRvGbK49DiAFQe13z8qLcDplEBrCkh6HjYZMdYD0R2098mE5Ux2w8MlBVCOUya9Q==\""; path="/"; domain=".shopee.com.my"; path_spec; domain_dot; secure; expires="2018-06-13 12:29:44Z"; httponly=None; version=0
+Set-Cookie3: SPC_SC_TK=19bfc7549a89f79c26bf4fa2062ac81b; path="/"; domain=".shopee.com.my"; path_spec; domain_dot; secure; expires="2018-06-13 12:29:44Z"; httponly=None; version=0
+Set-Cookie3: SPC_SC_UD=72014359; path="/"; domain=".shopee.com.my"; path_spec; domain_dot; secure; expires="2018-06-13 12:29:44Z"; httponly=None; version=0
+Set-Cookie3: SPC_U=72014359; path="/"; domain=".shopee.com.my"; path_spec; domain_dot; secure; expires="2018-06-13 12:29:44Z"; version=0
+Set-Cookie3: SPC_T_F=0; path="/"; domain="seller.shopee.com.my"; path_spec; expires="2038-06-01 12:29:44Z"; version=0
+Set-Cookie3: SPC_T_ID="\"ars0eu1a12N20gtr/9yKeVQauVV9Qzv1lAL1/KVy7fcXlyLRSPZevv8sbVlpQypykKCeeDLGFD7J+hoPuX1lDq0+QkQTsgn0PHAU/QiIUA0=\""; path="/"; domain="seller.shopee.com.my"; path_spec; expires="2038-06-01 12:29:44Z"; version=0
+Set-Cookie3: SPC_T_IV="\"/N1tUgn77ygNF+eBuvGipw==\""; path="/"; domain="seller.shopee.com.my"; path_spec; expires="2038-06-01 12:29:44Z"; version=0
