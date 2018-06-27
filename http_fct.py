@@ -96,14 +96,14 @@ except IOError:
     print('Cookie未加载！')
 
 cookies_var=(session.cookies._cookies)
-# print cookies_var['.shopee.com.my']['/']['SPC_EC'].value
-# print cookies_var['.shopee.com.my']['/']['SPC_SC_TK'].value
-# print cookies_var['.shopee.com.my']['/']['SPC_SC_UD'].value
-# print cookies_var['.shopee.com.my']['/']['SPC_U'].value
-#
-# print cookies_var['seller.shopee.com.my']['/']['SPC_T_F'].value
-# print cookies_var['seller.shopee.com.my']['/']['SPC_T_ID'].value
-# print cookies_var['seller.shopee.com.my']['/']['SPC_T_IV'].value
+print 'SPC_EC',cookies_var['.shopee.com.my']['/']['SPC_EC'].value
+print 'SPC_SC_TK',cookies_var['.shopee.com.my']['/']['SPC_SC_TK'].value
+print 'SPC_SC_UD',cookies_var['.shopee.com.my']['/']['SPC_SC_UD'].value
+print 'SPC_U',cookies_var['.shopee.com.my']['/']['SPC_U'].value
+
+print 'SPC_T_F',cookies_var['seller.shopee.com.my']['/']['SPC_T_F'].value
+print 'SPC_T_ID',cookies_var['seller.shopee.com.my']['/']['SPC_T_ID'].value
+print 'SPC_T_IV',cookies_var['seller.shopee.com.my']['/']['SPC_T_IV'].value
 
 # {'.shopee.com.my': {'/': {'SPC_SC_TK': Cookie(version=0, name='SPC_SC_TK', value='78e0098120050b74604a2c3b489f82b8', port=None, port_specified=False, domain='.shopee.com.my', domain_specified=True, domain_initial_dot=True, path='/', path_specified=True, secure=True, expires=1528724702, discard=False, comment=None, comment_url=None, rest={'httponly': 'None'}, rfc2109=False), 'SPC_EC': Cookie(version=0, name='SPC_EC', value='"3AoUL9B50ZT6KChuFx9wXbHNyPyuonTT1vReMVPn3pbxWgUolX2Px2C7ERMn0gHTj1H+tARKJ8ty3tCx69nD98WxBegKF9rYRWfyE9ZBbyuQbHpU7OgwqmwIoOR8LFhZKYZOu7oIv2xsjVU4cvCRcQ=="', port=None, port_specified=False, domain='.shopee.com.my', domain_specified=True, domain_initial_dot=True, path='/', path_specified=True, secure=True, expires=1528724702, discard=False, comment=None, comment_url=None, rest={'httponly': 'None'}, rfc2109=False), 'SPC_SC_UD': Cookie(version=0, name='SPC_SC_UD', value='72014359', port=None, port_specified=False, domain='.shopee.com.my', domain_specified=True, domain_initial_dot=True, path='/', path_specified=True, secure=True, expires=1528724702, discard=False, comment=None, comment_url=None, rest={'httponly': 'None'}, rfc2109=False), 'SPC_U': Cookie(version=0, name='SPC_U', value='72014359', port=None, port_specified=False, domain='.shopee.com.my', domain_specified=True, domain_initial_dot=True, path='/', path_specified=True, secure=True, expires=1528724702, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False)}}, 'seller.shopee.com.my': {'/': {'SPC_T_IV': Cookie(version=0, name='SPC_T_IV', value='"cOikHwuPCNCOC5vAy021iQ=="', port=None, port_specified=False, domain='seller.shopee.com.my', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=2158839902, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), 'SPC_T_ID': Cookie(version=0, name='SPC_T_ID', value='"Vnquxfq0UqLmYrp2s6oR7PC+vDLNKTFHYbcCCfLt3cE5LIzV744h6LEyAhY1exDtNL99kvksajcQoOVnsYty/LAwueRUBZMNHKHLOyKy34Q="', port=None, port_specified=False, domain='seller.shopee.com.my', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=2158839902, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), 'SPC_T_F': Cookie(version=0, name='SPC_T_F', value='0', port=None, port_specified=False, domain='seller.shopee.com.my', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=2158839902, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False)}}}
 
@@ -255,13 +255,78 @@ if __name__ == '__main__':
 # '''
 
 # '''
+data={"shop_ids":{"0":"65726931"}}
+follow_header = {
+        'Accept': 'application/json',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Accept-Language': 'en-GB,en;q=0.5',
+        'Connection': 'keep-alive',
+        'Content-Length': '23',
+        'Content-Type': 'application/json',
+        'Host': 'shopee.com.my',
 
-if 0:
-    response = urllib2.urlopen(
-        "https://shopee.com.my/shop/37216574/followers/?offset=0&limit=50&offset_of_offset=0&_=1527731021727&__classic__=1")
+        'if-none-match-': '55b03-09900f96bf034b0960cc3c8908ac98da',
+        'origin':'https://shopee.com.my',
+        'Referer': 'https://shopee.com.my/ni.my',
+
+        'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+        'x-api-source':'pc',
+        'x-csrftoken':'nzIzvMrqvmObU4vCRlmsTnj9sJMhMY6N',
+        'x-requested-with': 'XMLHttpRequest'}
+    # follow_header={}
+follow_cookies={
+    '_ga':'GA1.3.1939319452.1527731027',
+    '_gid':'GA1.3.753135685.1528117564',
+    'ajs_anonymous_id':"812562d7-1133-4c57-8a79-a2528aab53f4",
+    'ajs_group_id':'null',
+    'ajs_user_id':'null',
+    'bannerShown':'true',
+    'csrftoken':'nzIzvMrqvmObU4vCRlmsTnj9sJMhMY6N',
+    'cto_lwid':'b82b8f2f-cc24-40fd-9adc-f5a516c07d44',
+    'language':'zhHans',
+    'REC_T_ID':'12ced1c4-6336-11e8-8aaa-5254009900d0',
+    # 'root_csrftoken':'2df00ec1-36be-45a5-9b17-f156169bcfdb',
+    'SPC_EC':"-",
+    'SPC_F':'3pSLvDrguo02XxrsVAoks5Iqz4QOd0c9',
+    'SPC_IA': '-1',
+    'SPC_SC_TK':'39518c9898f86347a90a3d3e3cc82f8d',
+    'SPC_SC_UD':'72014359',
+    'SPC_SI':'elry3aoe2g0fnpsjn6ht65g9ibfqezxx',
+
+    'SPC_T_ID':"YBBqQyCHrKUp0TgS34k5vx+vhkoUnyngLrs5NfriaDryP468YOzGRj8vbrl8ZUWdj63QCWGNBMG6Y0NJuSTtuGCFFJR2bB3dQIysfTCj1zc=",
+    'SPC_T_IV':"FQJbD7g3R0XJ0wsYP6zhbA==",
+    'SPC_U':'72014359',
+    'UYOMAPJWEMDGJ':''
+    }
+if 1:
+    # response = urllib2.urlopen(
+    #     "https://shopee.com.my/shop/37216574/followers/?offset=0&limit=50&offset_of_offset=0&_=1527731021727&__classic__=1")
     # response = urllib2.urlopen("https://shopee.com.my/shop/37216574/followers/?__classic__=1")
     # bsObj = BS(open('fans.html'), "html.parser")
-    bsObj = BS(response.read(), "html.parser")
+    # bsObj = BS(response.read(), "html.parser")
+    # response = session.get("https://shopee.com.my/shop/37216574/followers/?__classic__=1")
+    # response = session.get("https://shopee.com.my/ni.my")
+    # response = session.post("https://shopee.com.my/api/v1/shops/",data=json.dumps(data),cookies=follow_cookies,headers=follow_header)
+    # print response
+    # url = 'https://shopee.com.my/shop/37219675/followers/?offset=0&limit=40&offset_of_offset=0&_=1527731021727&__classic__=1'
+    url = 'https://shopee.com.my/tweedy988'
+    url = 'https://shopee.com.my/ni.my'
+    url = 'https://shopee.com.my/api/v1/shops/'
+    data={'shop_ids':'55703158'}
+
+    response = session.post(url,data=json.dumps(data))
+    # response2 = urllib2.urlopen(
+    #         url)
+    session.close()
+    # shopid=str(response.url).split('=')[-1]
+    # print shopid
+    # if response.status_code != 200:
+    #     print 'query fans table status code:', response.status_code
+    #     pass
+        # QMessageBox.warning(self.centralWidget(), u"警告",u"获取粉丝列表失败，错误码："+str(response.status_code))
+
+    # bsObj = BS(open('fans.html'), "html.parser")
+    bsObj = BS(response.content, "html.parser")
 
     # bsObj=BS(response.read(),"html.parser")
 else:
@@ -294,8 +359,9 @@ print fans_dir
 # print follow_dir
 '''
 '''
+'''
 bsObj = BS(open('profile.html'), "html.parser")
 
 username = bsObj.select('div[class="user-page-brief__username"]')
 print username[0].contents[0]
-# '''
+'''
